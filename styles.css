@@ -1,15 +1,22 @@
 body {
-  background-color: #A594F9;
-  min-height: 80vh;
-  padding: 1rem;
-  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #A594F9;
+  box-sizing: border-box;
   color: hsl(198, 1%, 29%);
   font-family: "Montserrat", sans-serif;
   text-align: center;
   font-size: 130%;
+}
+
+main {
+  padding: 3rem;
+  flex: 1 0 auto;
 }
 
 .container {
@@ -17,14 +24,14 @@ body {
   height: auto;
   min-height: 500px;
   max-width: 500px;
-  min-width: 250px;
-  background: #F1F5F8;
+  min-width: 250px;  background: #F1F5F8;
   background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
-  background-size: 25px 25px;
+  background-size: 50px 50px;
   border-radius: 20px;
   box-shadow: 4px 3px 7px 2px #00000040;
-  padding: 1rem;
   box-sizing: border-box;
+  padding: 1rem;
+  margin: auto;
 }
 
 .heading {
@@ -39,10 +46,11 @@ body {
   padding: 0.2rem 1.2rem;
   border-radius: 20% 5% 20% 5%/5% 20% 25% 20%;
   background-color: #CDC1FF;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
 }
 
 .form input {
+  font-weight: 500;
   box-sizing: border-box;
   background-color: transparent;
   padding: 0.7rem;
@@ -94,14 +102,71 @@ p {
 }
 
 footer {
-  font-weight: 500;
+  background-color: black;
+  font-weight: 600;
   font-size: 16px;
-  position: fixed;
-  left: 0;
-  bottom: 0;
   width: 100%;
-  background-color: #A594F9;
   color: #505050;
   text-align: center;
   padding: 5px 0;
+  margin-top: 3.5rem;
+}
+
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .heading h1 {
+    font-size: 2rem;
+  }
+
+  .form input {
+    width: 90%;
+    font-size: 1rem;
+  }
+
+  button span {
+    padding: 0.5rem 1rem;
+  }
+
+  footer {
+    font-size: 14px;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .container {
+    max-width: 100%;
+    padding: 0.5rem;
+  }
+
+  main {
+    padding: 2rem;
+  }
+
+  .heading h1 {
+    font-size: 1.8rem;
+  }
+
+  .form input {
+    width: 100%;
+    font-weight: 500;
+    font-size: 0.8rem;
+  }
+
+  button span {
+    padding: 0.5rem 1.5rem;
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-size: 12px;
+  }
 }
