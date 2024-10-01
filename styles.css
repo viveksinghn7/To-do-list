@@ -98,12 +98,11 @@ li {
 
 p {
   margin: 5px;
-  padding-bottom: 5px;
 }
 
 footer {
   background-color: black;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 16px;
   width: 100%;
   color: #505050;
@@ -167,6 +166,6 @@ footer {
     position: fixed;
     bottom: 0;
     left: 0;
-    font-size: 12px;
+    font-size: 13px;
   }
 }
