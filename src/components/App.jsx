@@ -44,10 +44,6 @@ function App() {
           ))}
         </ul>
       </div>
-      <footer>
-        <p>Copyright © 2024 | To-Do List</p>
-        <p>Made with ❤️ by Viveksingh Negi using ReactJS</p>
-      </footer>
     </div>
   );
 }

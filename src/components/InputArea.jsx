@@ -8,9 +8,16 @@ function InputArea(props) {
     setInputText(newValue);
   }
 
+  function handleKeyDown(event) {
+    if (event.key === "Enter") {
+      props.onAdd(inputText);
+      setInputText("");
+    }
+  }
+
   return (
     <div className="form">
-      <input onChange={handleChange} type="text" value={inputText} />
+      <input onChange={handleChange} onKeyDown={handleKeyDown} type="text" value={inputText} />
       <button
         onClick={() => {
           props.onAdd(inputText);
